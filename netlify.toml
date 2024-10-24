@@ -1,4 +1,5 @@
 [build]
+	command = "npm init"
 	command = "npm run build"
 	publish = "/build"
 	base = "/"
