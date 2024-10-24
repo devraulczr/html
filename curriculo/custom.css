@@ -1,0 +1,86 @@
+/* Fundo e Estilo Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Títulos e Cabeçalhos */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+h2, h3, h4 {
+    text-align: center;
+    color: #444;
+    margin: 0.5em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+/* Seções */
+section {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Texto */
+p {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Botões e Links */
+.custom-btn {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: skyblue;
+    color: black;
+}
+
+/* Referências */
+.referencias {
+    text-align: center;
+}
