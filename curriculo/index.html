@@ -6,17 +6,28 @@
     <title>Currículo - Raul Cézar Ribeiro Lara</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        /* Estilo para o tema claro */
+        :root {
+            --bg-color-light: #ffffff;
+            --text-color-light: #000000;
+            --accent-light: #ff9800;
+            --bg-color-dark: #121212;
+            --text-color-dark: #ffffff;
+            --accent-dark: #ff9800;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: #fff;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradiente aplicado diretamente ao body */
         }
+
         .container {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -26,58 +37,121 @@
             max-width: 600px;
             width: 90%;
             text-align: center;
+            transition: background-color 0.3s, color 0.3s;
         }
+
         h1, h2, h3, h4 {
             margin-bottom: 10px;
         }
+
         .info {
             margin-bottom: 20px;
         }
+
         p {
             line-height: 1.6;
         }
+
         .btn-container {
             margin-top: 20px;
         }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
             margin: 5px;
             border: none;
             border-radius: 5px;
-            background: #ff9800;
+            background: var(--accent-light);
             color: white;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
         }
+
         .btn:hover {
             background: #e68900;
         }
+
         .icon {
             margin-right: 8px;
         }
+
+        /* Estilo da nav bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            color: #fff;
+            transition: background 0.3s;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff9800;
+        }
+
+        /* Estilo do botão de alternância de tema */
+        .theme-toggle {
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: #ff9800;
+            color: white;
+            border: none;
+        }
+
+        .theme-toggle:hover {
+            background: #e68900;
+        }
+
     </style>
 </head>
 <body>
+    <nav>
+        <div>
+            <a href="#inicio">Início</a>
+            <a href="#objetivo">Objetivo</a>
+            <a href="#formacao">Formação</a>
+            <a href="#experiencias">Experiências</a>
+            <a href="#qualificacoes">Qualificações</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#referencias">Referências</a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle">Alterar Tema</button>
+    </nav>
+
     <div class="container">
-        <h1>Currículo</h1>
+        <h1 id="inicio">Currículo</h1>
         <h2>Raul Cézar Ribeiro Lara</h2>
         <h4><i class="fas fa-map-marker-alt icon"></i>Santa Cruz - Nova Serrana, MG</h4>
         <h4><i class="fas fa-phone icon"></i>(37) 9 9988-22259</h4>
         <h4><i class="fas fa-envelope icon"></i>raulcreazr@gmail.com</h4>
 
-        <div class="info">
+        <div class="info" id="objetivo">
             <h2>Objetivo</h2>
             <p>Entrar na área de programação</p>
         </div>
 
-        <div class="info">
+        <div class="info" id="formacao">
             <h2>Formação Escolar</h2>
             <p>Cursando 1º ano - Ensino Médio</p>
         </div>
 
-        <div class="info">
+        <div class="info" id="experiencias">
             <h2>Experiências</h2>
             <h3>Pet Shop</h3>
             <p>Trabalhei em um Pet Shop por 6 meses, onde dava banho, secava e penteava cachorros.</p>
@@ -85,25 +159,46 @@
             <p>Atualmente trabalho como repositor em um supermercado, há 11 meses.</p>
         </div>
 
-        <div class="info">
+        <div class="info" id="qualificacoes">
             <h2>Qualificações Profissionais</h2>
             <p>Informática Básica - (40 horas)</p>
             <p>Curso de Programação PHP Moderno - (40 horas)</p>
             <p>Curso de Programação Python Mundo 1 - (40 horas)</p>
         </div>
 
-        <div class="info">
+        <div class="info" id="habilidades">
             <h2>Habilidades e Informações Adicionais</h2>
             <p>Inglês Intermediário</p>
             <p>Fácil aprendizado</p>
             <p>Experiência desde pequeno em programação</p>
         </div>
 
-        <div class="btn-container">
+        <div class="btn-container" id="referencias">
             <h2>Referências</h2>
             <a href="https://github.com/devraulczr" class="btn"><i class="fab fa-github icon"></i>GitHub</a>
             <a href="https://www.linkedin.com/in/raul-cézar-907a7b334/" class="btn"><i class="fab fa-linkedin icon"></i>LinkedIn</a>
         </div>
     </div>
+
+    <script>
+        // Lógica para alternar entre temas
+        const themeToggleButton = document.getElementById("theme-toggle");
+        const body = document.body;
+        const container = document.querySelector(".container");
+
+        themeToggleButton.addEventListener("click", () => {
+            if (body.style.backgroundColor === 'rgb(18, 18, 18)') {
+                body.style.background = "linear-gradient(135deg, #1e3c72, #2a5298)";
+                body.style.color = "#fff";
+                container.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+                container.style.backdropFilter = "blur(10px)";
+            } else {
+                body.style.backgroundColor = "#121212";
+                body.style.color = "#fff";
+                container.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+                container.style.backdropFilter = "blur(10px)";
+            }
+        });
+    </script>
 </body>
 </html>
