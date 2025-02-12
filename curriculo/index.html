@@ -4,58 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Raul Cézar Ribeiro Lara</title>
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+        h1, h2, h3, h4 {
+            margin-bottom: 10px;
+        }
+        .info {
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e68900;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+    </style>
 </head>
-<body class="background">
-    <main class="body">
+<body>
+    <div class="container">
         <h1>Currículo</h1>
         <h2>Raul Cézar Ribeiro Lara</h2>
-        <h4>📍 Santa Cruz - Nova Serrana, MG</h4>
-        <h4>📞 (37) 9 9988-22259</h4>
-        <h4>📧 raulcreazr@gmail.com</h4>
+        <h4><i class="fas fa-map-marker-alt icon"></i>Santa Cruz - Nova Serrana, MG</h4>
+        <h4><i class="fas fa-phone icon"></i>(37) 9 9988-22259</h4>
+        <h4><i class="fas fa-envelope icon"></i>raulcreazr@gmail.com</h4>
 
-        <section>
+        <div class="info">
             <h2>Objetivo</h2>
             <p>Entrar na área de programação</p>
-        </section>
+        </div>
 
-        <section>
+        <div class="info">
             <h2>Formação Escolar</h2>
-            <p>Cursando 1º ano - Ensino Medio</p>
-        </section>
+            <p>Cursando 1º ano - Ensino Médio</p>
+        </div>
 
-        <section>
+        <div class="info">
             <h2>Experiências</h2>
             <h3>Pet Shop</h3>
             <p>Trabalhei em um Pet Shop por 6 meses, onde dava banho, secava e penteava cachorros.</p>
-
             <h3>Supermercado</h3>
             <p>Atualmente trabalho como repositor em um supermercado, há 11 meses.</p>
-        </section>
+        </div>
 
-        <section>
+        <div class="info">
             <h2>Qualificações Profissionais</h2>
             <p>Informática Básica - (40 horas)</p>
             <p>Curso de Programação PHP Moderno - (40 horas)</p>
             <p>Curso de Programação Python Mundo 1 - (40 horas)</p>
-        </section>
+        </div>
 
-        <section>
+        <div class="info">
             <h2>Habilidades e Informações Adicionais</h2>
             <p>Inglês Intermediário</p>
             <p>Fácil aprendizado</p>
             <p>Experiência desde pequeno em programação</p>
-        </section>
+        </div>
 
-        <section class="referencias">
+        <div class="btn-container">
             <h2>Referências</h2>
-            <a href="https://github.com/devraulczr">
-                <button class="custom-btn">Github</button>
-            </a>
-            <a href="https://www.linkedin.com/in/raul-cézar-907a7b334/">
-                <button class="custom-btn">LinkedIn</button>
-            </a>
-        </section>
-    </main>
+            <a href="https://github.com/devraulczr" class="btn"><i class="fab fa-github icon"></i>GitHub</a>
+            <a href="https://www.linkedin.com/in/raul-cézar-907a7b334/" class="btn"><i class="fab fa-linkedin icon"></i>LinkedIn</a>
+        </div>
+    </div>
 </body>
 </html>
