@@ -181,11 +181,15 @@
     </div>
 
     <script>
+        
         // Lógica para alternar entre temas
         const themeToggleButton = document.getElementById("theme-toggle");
         const body = document.body;
         const container = document.querySelector(".container");
-
+        body.style.background = "linear-gradient(135deg, #1e3c72, #2a5298)";
+        body.style.color = "#fff";
+        container.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+        container.style.backdropFilter = "blur(10px)";
         themeToggleButton.addEventListener("click", () => {
             if (body.style.backgroundColor === 'rgb(18, 18, 18)') {
                 body.style.background = "linear-gradient(135deg, #1e3c72, #2a5298)";
